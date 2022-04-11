@@ -8,6 +8,15 @@ document.addEventListener("click", (event) => {
     if (event.target.matches(".btn3") == true) {
         atividade3();
     }
+    if (event.target.matches(".btn4") == true) {
+        atividade4();
+    }
+    if (event.target.matches(".btn5") == true) {
+        atividade5();
+    }
+    if (event.target.matches(".btn5") == true) {
+        atividade6();
+    }
 })
 
 function atividade1() {
@@ -53,4 +62,41 @@ function atividade3() {
         Estciv = prompt("Valor inválido digite seu estádo civil");
     }
     resp3.textContent = (`"Nome é ${nome}, sua idade é ${idade}, o salário é R$${salario}, o sexo é ${sexo.toLocaleUpperCase()}, estado civíl ${Estciv} "`);
+}
+
+function atividade4() {
+    let resp4 = document.getElementById(4);
+    let anos = Number();
+    let A = 80000;
+    let B = 200000;
+    let crescA = 0.03;
+    let crescB = 0.015;
+    while (A < B) {
+        A = A + (A * crescA);
+        B = B + (B * crescB);
+        anos++;
+    }
+    resp4.textContent = (`"Após ${anos} anos a polulalção A passará a população B"`);
+}
+
+function atividade5() {
+    let resp5 = document.getElementById(5);
+    let anos = Number();
+    let A = Number(prompt("Digite o número da população A: "));
+    let B = Number(prompt("Digite o número da população B: "));
+    let crescA = Number(prompt("Digite o número do crescimento A: "));
+    let crescB = Number(prompt("Digite o número do crescimento B: "));
+    while (A < B) {
+        A = A + (A * crescA);
+        B = B + (B * crescB);
+        anos++;
+    }
+    resp5.textContent = (`"Após ${anos} anos a polulalção A passará a população B"`);
+}
+
+function atividade6() {
+    resp6 = document.getElementById(6);
+    for (let n1 = 1; n1 = 21; n1++){
+        resp6.textContent = <p>n1</p>;
+    }
 }
