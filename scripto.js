@@ -31,26 +31,26 @@ function atividade2() {
 }
 
 function atividade3() {
-    let resp3 = document.getElementById(1515);
+    let resp3 = document.getElementById(3);
     let nome = prompt("Digite seu nome: ");
     let idade = Number(prompt("Digite sua idade: entre 0 à 150: "));
     let salario = Number(prompt("Digite o valor do seu salario: "));
     let sexo = prompt("Digite o sexo biológico: ");
-    let  Estciv = prompt("Digite seu  Estado Civil: ");
-    while(nome < nome.length){
+    let Estciv = prompt("Digite seu  Estado Civil: ");
+    while (nome.length < 3) {
         nome = prompt("Digite um nome acima de 3 caracteres: ");
     }
-    while(idade <= 0 || idade >= 150){
+    while (idade <= 0 || idade >= 150) {
         idade = Number(prompt("Digite sua idade: ENTRE 0 à 150: "));
     }
-    while(salario <= 0){
+    while (salario <= 0) {
         salario = Number(prompt(" Error, valor deve ser maior que 0: "));
     }
-    while(sexo.toLocaleLowerCase != "f" || sexo.toLocaleLowerCase != "m"){
+    while (sexo.toLowerCase() != "f" && sexo.toLowerCase() != "m") {
         sexo = prompt("Digite o sexo BIOLÓGICO: ");
     }
-    while(Estciv != 's' || Estciv != 'c' || Estciv != 'v' || Estciv != 'd'){
+    while (Estciv.toLowerCase() != "s" && Estciv.toLowerCase() != "c" && Estciv.toLowerCase() != "v" && Estciv.toLowerCase() != "d") {
         Estciv = prompt("Valor inválido digite seu estádo civil");
     }
-    resp3.textContent(`"Nome é ${nome}, sua idade é ${idade}, o salário é R$${salario}, o sexo é ${sexo.toLocaleUpperCase()}, estado civíl ${Estciv} "`)
+    resp3.textContent = (`"Nome é ${nome}, sua idade é ${idade}, o salário é R$${salario}, o sexo é ${sexo.toLocaleUpperCase()}, estado civíl ${Estciv} "`);
 }
